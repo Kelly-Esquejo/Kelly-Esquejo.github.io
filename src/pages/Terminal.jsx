@@ -1,9 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import "../css/Terminal.css";
-import About from "../components/About";
-import Contact from "../components/Contact";
-import Projects from "../components/Projects";
-import Jokes from "../components/Joke";
+
+import About from "./About";
+import Contact from "./Contact";
+import Jokes from "./Joke";
+import Projects from "./Projects";
 
 const COMMANDS = [
     { cmd: "-about", desc: "About Me", component: <About /> },
@@ -65,7 +66,8 @@ function Terminal() {
                     {/*exit single quote code */} Type or click &#39;
                     <span
                         className="output-unknown-tag"
-                        onClick={() => processCommand("-help")}>
+                        onClick={() => processCommand("-help")}
+                    >
                         -help
                     </span>
                     &#39; to view a list of commands.
@@ -157,7 +159,8 @@ function Terminal() {
                 {/*exit single quote code */}
                 <span
                     className="output-unknown-tag"
-                    onClick={() => processCommand("-help")}>
+                    onClick={() => processCommand("-help")}
+                >
                     -help
                 </span>
                 &#39;
@@ -173,7 +176,8 @@ function Terminal() {
                 Allow users to click any of them and execute said command */}
                 <span
                     className="command-cmd"
-                    onClick={() => processCommand(cmd.cmd)}>
+                    onClick={() => processCommand(cmd.cmd)}
+                >
                     {cmd.cmd || ""}
                 </span>
                 <span className="command-desc">{cmd.desc}</span>

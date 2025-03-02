@@ -106,7 +106,7 @@ const PROJECTS = [
         personal interests. Integrated Google Drive API and Joke v2 API to dynamically
         display images of cars for users to guess and Joke v2 generate random jokes. `,
         features: null,
-        link: "https://kelly-esquejo.github.io/kellz.land/",
+        link: "https://kellz-land.netlify.app/",
         isPrivate: false,
     },
     {
@@ -186,7 +186,8 @@ function ProjectItem({
                         className="project-link"
                         href={link}
                         target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer"
+                    >
                         {title}
                     </a>
                 ) : (
